@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Shrink</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    
+
+
+    <div class="nav">
+        <div class="items-left">
+            <a href="#">services</a>
+            <a href="#">rooms</a>
+        </div>
+        <div class="items-right">
+            <a href="#">booking</a>
+            <a href="#">contact</a>
+
+        </div>
+    </div>
+    
+    <div class="logo-container">
+        <h1 class="logo">SEPIA</h1>
+    </div>
+
+
+    <div class="container"></div>
+    <div class="content">
+        <img src="hero.jpg" alt=""/>
+    </div>
+
+    
+        
+
+
+    <script>
+        ScrollTrigger.create({
+            animation:gsap.from(".logo",{
+                y:"50vh",
+                scale:6,
+                yPercent:-50,
+
+            }),
+            scrub:true,
+            trigger:".content",
+            start:"top bottom",
+            endTrigger:".content",
+            end:"top center",
+         });
+
+    </script>
+</body>
+</html>
